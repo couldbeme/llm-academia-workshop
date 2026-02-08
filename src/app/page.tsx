@@ -70,6 +70,38 @@ export default function Home() {
               Metaprompt Template • Agent Roles • Workflow Blueprints • Cheat Sheets
             </div>
           </Link>
+
+          <div className="grid grid-cols-2 gap-6">
+            <Link 
+              href="/handbook"
+              className="block p-6 bg-gray-900 rounded-xl border border-gray-800 hover:border-yellow-500 transition group"
+            >
+              <div className="flex justify-between items-center">
+                <div>
+                  <h2 className="text-xl font-bold text-white group-hover:text-yellow-400 transition">
+                    📖 Handbook
+                  </h2>
+                  <p className="text-gray-400 mt-1 text-sm">Complete playbook for self-paced learning</p>
+                </div>
+                <span className="text-2xl text-gray-600 group-hover:text-yellow-500 transition">→</span>
+              </div>
+            </Link>
+
+            <Link 
+              href="/notes"
+              className="block p-6 bg-gray-900 rounded-xl border border-gray-800 hover:border-orange-500 transition group"
+            >
+              <div className="flex justify-between items-center">
+                <div>
+                  <h2 className="text-xl font-bold text-white group-hover:text-orange-400 transition">
+                    🎤 Speaker Notes
+                  </h2>
+                  <p className="text-gray-400 mt-1 text-sm">Presenter guide with timing & tips</p>
+                </div>
+                <span className="text-2xl text-gray-600 group-hover:text-orange-500 transition">→</span>
+              </div>
+            </Link>
+          </div>
         </div>
 
         <div className="text-center text-gray-600 text-sm">
