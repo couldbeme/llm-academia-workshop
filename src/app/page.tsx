@@ -1,65 +1,83 @@
-import Image from "next/image";
+import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <div className="min-h-screen bg-[#0a0a0a] text-white flex items-center justify-center">
+      <div className="max-w-2xl w-full p-8 space-y-12">
+        <div className="text-center space-y-4">
+          <h1 className="text-5xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+            LLM Mastery for Academia
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="text-xl text-gray-400">
+            From Prompts to Systems
+          </p>
+          <p className="text-gray-500">
+            Workshop for Doctoral & Postdoctoral Researchers
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+
+        <div className="grid gap-6">
+          <Link 
+            href="/session1"
+            className="block p-6 bg-gray-900 rounded-xl border border-gray-800 hover:border-blue-500 transition group"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            <div className="flex justify-between items-center">
+              <div>
+                <h2 className="text-2xl font-bold text-white group-hover:text-blue-400 transition">
+                  Session 1
+                </h2>
+                <p className="text-gray-400 mt-1">Foundations & Multi-Agent Architecture</p>
+              </div>
+              <span className="text-3xl text-gray-600 group-hover:text-blue-500 transition">→</span>
+            </div>
+            <div className="mt-4 text-sm text-gray-500">
+              Research Team Model • Seven-Component Metaprompt • Phase-Gated Workflows • Devil&apos;s Advocate
+            </div>
+          </Link>
+
+          <Link 
+            href="/session2"
+            className="block p-6 bg-gray-900 rounded-xl border border-gray-800 hover:border-purple-500 transition group"
           >
-            Documentation
-          </a>
+            <div className="flex justify-between items-center">
+              <div>
+                <h2 className="text-2xl font-bold text-white group-hover:text-purple-400 transition">
+                  Session 2
+                </h2>
+                <p className="text-gray-400 mt-1">Validation Cycles & Advanced Workflows</p>
+              </div>
+              <span className="text-3xl text-gray-600 group-hover:text-purple-500 transition">→</span>
+            </div>
+            <div className="mt-4 text-sm text-gray-500">
+              Three Validation Types • Iteration Protocol • Workflow Patterns • Meta-Validation
+            </div>
+          </Link>
+
+          <Link 
+            href="/templates"
+            className="block p-6 bg-gray-900 rounded-xl border border-gray-800 hover:border-green-500 transition group"
+          >
+            <div className="flex justify-between items-center">
+              <div>
+                <h2 className="text-2xl font-bold text-white group-hover:text-green-400 transition">
+                  Templates & Resources
+                </h2>
+                <p className="text-gray-400 mt-1">Copy-paste ready templates</p>
+              </div>
+              <span className="text-3xl text-gray-600 group-hover:text-green-500 transition">→</span>
+            </div>
+            <div className="mt-4 text-sm text-gray-500">
+              Metaprompt Template • Agent Roles • Workflow Blueprints • Cheat Sheets
+            </div>
+          </Link>
         </div>
-      </main>
+
+        <div className="text-center text-gray-600 text-sm">
+          Use <kbd className="bg-gray-800 px-2 py-1 rounded">←</kbd> <kbd className="bg-gray-800 px-2 py-1 rounded">→</kbd> or <kbd className="bg-gray-800 px-2 py-1 rounded">Space</kbd> to navigate slides
+          <br />
+          Press <kbd className="bg-gray-800 px-2 py-1 rounded">F</kbd> for fullscreen
+        </div>
+      </div>
     </div>
   );
 }
